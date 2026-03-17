@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DevOps App</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: #1e293b;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #38bdf8;
+      color: black;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    li {
+      background: #334155;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🚀 DevOps Microservices App</h1>
+
+  <button onclick="getUsers()">Get Users</button>
+
+  <ul id="users"></ul>
+</div>
+
+<script>
+  async function getUsers() {
+    const res = await fetch("/api/users");
+    const data = await res.json();
+
+    const list = document.getElementById("users");
+    list.innerHTML = "";
+
+    data.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = user.name;
+      list.appendChild(li);
+    });
+  }
+</script>
+
+</body>
+</html>
+
