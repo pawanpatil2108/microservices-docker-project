@@ -19,7 +19,7 @@ User → Nginx → Frontend → Backend → MongoDB
 - nginx/
 - docker-compose.yml
 
-<img width="1536" height="1024" alt="ChatGPT Image Mar 17, 2026, 02_08_13 PM" src="https://github.com/user-attachments/assets/d57f9f10-be51-43f2-9b69-686231e97aaf" />
+<img width="1080" height="1080" alt="ChatGPT Image Mar 17, 2026, 02_08_13 PM" src="https://github.com/user-attachments/assets/d57f9f10-be51-43f2-9b69-686231e97aaf" />
 
 
 ## ▶️ How to Run
